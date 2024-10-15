@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Connect- Your Cyber Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #cad7ec; /* Light gray background for the body */
+        }
+        header {
+            background-color: #1abc9c; /* Header color */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        h2 {
+            color: #2e86c1; /* Heading color */
+            border-bottom: 2px solid #1abc9c; /* Underline for headings */
+            padding-bottom: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgb(200, 203, 234); /* White background for the container */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for the container */
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .service {
+            background: rgb(181, 230, 180);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 0 30%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            transition: transform 0.2s; /* Animation for hover effect */
+        }
+        .service:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        .contact {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .contact a {
+            color: #d35400; /* Link color */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        form {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for forms */
+        }
+        input[type="text"], input[type="email"], input[type="file"], input[type="datetime-local"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #2e86c1; /* Button color */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+        input[type="submit"]:hover {
+            background-color: #1e5f8b; /* Darker shade on hover */
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1abc9c; /* Footer color */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Cafe Connect</h1>
+    <p>Your one-stop solution for all printing and document services</p>
+</header>
+
+<div class="container">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Printing Services</h3>
+            <p>Send files for printing easily and efficiently.</p>
+        </div>
+        <div class="service">
+            <h3>Document Laminating</h3>
+            <p>Protect your important documents with high-quality lamination.</p>
+        </div>
+        <div class="service">
+            <h3>Application Filling</h3>
+            <p>Book an appointment for filling out various applications.</p>
+        </div>
+        <div class="service">
+            <h3>Photocopying</h3>
+            <p>Get clear and affordable photocopies of your documents.</p>
+        </div>
+        <div class="service">
+            <h3>Mobile Accessories</h3>
+            <p>Find the latest mobile accessories including headphones and back covers.</p>
+        </div>
+    </div>
+
+    <h2>Send File for Printing</h2>
+    <form action="send_email.php" method="post">
+        <input type="file" name="file" required>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="submit" value="Send File">
+    </form>
+
+    <h2>Book an Appointment</h2>
+    <form action="send_email.php" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="datetime-local" name="appointment" required>
+        <input type="submit" value="Book Appointment">
+    </form>
+
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>
+            For more information, feel free to reach out:
+            <div style="display: flex; margin-left: 60px;justify-content: right;">
+                <a href="https://wa.me/7979018175"><img src="images/icons8-whatsapp-48.png" style="margin-right: 30px;" alt="phoneno."></a>
+                <a href="mailto:ds167221@gmail.com"><img src="images/gmail.png" height="45px" width="45px" style="margin-right: 30px;"  alt="Email"></a>
+                <a href="https://t.me/PK493"><img src="images/icons8-telegram-94.png"  height="45px" width="45px"   alt=""></a>
+                </div>
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 DK Photostate. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
